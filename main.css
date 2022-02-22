@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.gallery h1 {
+    text-align: center;
+    padding: 0 1rem;
+    margin-bottom: .5rem;
+    color: #223055;
+}
+.gallery {
+    max-width: 1200px;
+    margin: auto;
+}
+.galleryWrap {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: .5rem;
+    grid-auto-flow: row dense;
+}
+.galleryWrap img[src$="_w.jpg"] {
+    grid-column-end: span 2;
+}
+.galleryWrap img[src$="_p.jpg"] {
+    grid-row-end: span 2;
+}
+.galleryWrap img{
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
